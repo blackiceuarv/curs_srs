@@ -1,0 +1,89 @@
+// #Змінні
+$h1-color: #fff;
+$blue: #22678c;
+$fz: 50px;
+$textdecoration: underline;
+$firstletter: yellow;
+$block-width: 400px;
+$block-border: 1px solid salmon;
+// Блок змінні
+h1 {
+  color: $h1-color;
+  background: $blue;
+  font-size: $fz;
+  text-decoration: $textdecoration;
+  text-align: center;
+}
+h1::first-letter {
+  color: $firstletter;
+}
+// Блок вкладення
+.block {
+  width: $block-width;
+  border: $block-border;
+  .block__item {
+    width: 100%;
+    border: 1px solid purple;
+    .link {
+      text-decoration: none;
+      color: $firstletter;
+      font-size: $fz;
+    }
+  }
+}
+// Блок mixin
+.mixin-example {
+  .list-inline {
+    @include flex;
+    .item-1 {
+      @include list-color($blue);
+    }
+    .item-2 {
+      @include list-color($firstletter);
+    }
+    .item-3 {
+      @include list-color(red);
+    }
+    .item-4 {
+      @include list-color(blue);
+    }
+  }
+  .list-inline__item {
+    list-style: none;
+    padding-left: 20px;
+
+    &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    &:active {
+        transform: scale(0.2);
+    }
+    &:before {
+        content: "1488";
+    }
+  }
+}
+
+
+
+.block-image {
+    display: flex;
+    @include flex;
+    width: 100%;
+
+.item {
+    width: 300px;
+    height: 500px;
+
+    border: $block-border;
+}
+}
+
+@for $i from 1 through 6 {
+    .item-#{$i} {
+      background-image: url("../img/picture/#{$i}.jpg");
+    }
+  }
+

@@ -1,0 +1,137 @@
+.header {
+  height: 228px;
+  background: #1e0c06;
+  box-shadow: 0px -8px 52px rgba(238, 238, 238, 0.17);
+  border-radius: 0px 0px 79px 79px;
+}
+
+.link {
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 95% 5%;
+}
+
+.nav_item__burger {
+  justify-self: center;
+  align-self: center;
+}
+
+.burger:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  transition-duration: 1s;
+}
+
+.nav_item__list {
+  display: grid;
+  grid-gap: 10px;
+  align-items: center;
+  justify-items: center;
+
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 228px;
+}
+
+.nav_item__list>p:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  transition-duration: 1s;
+}
+
+.nav_item__list>p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #f5f5f5;
+}
+
+.nav_prices {
+  width: 196px;
+}
+
+.nav_about_us {
+  width: 97px;
+}
+
+.nav_item__burger {
+  display: none;
+}
+
+/* drop_down_menu */
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown_content {
+  display: none;
+
+  width: 50%;
+
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  transform: translate(-50% -50%);
+
+  background-color: #1e0c06;
+  box-shadow: 0px -8px 52px rgba(238, 238, 238, 0.17);
+  border-radius: 50px 0px 80px 20px;
+  color: #f5f5f5;
+
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown_content {
+  display: block;
+}
+
+.dropdown_content_nav>ul>li>p {
+  text-align: center;
+  width: 100px;
+  margin: 2px 0px 2px 0px;
+}
+
+.dropdown_content_nav>ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.dropdown_content_nav>ul>li>p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+
+  color: #f5f5f5;
+}
+
+.dropdown_content_nav>ul>li>p:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  transition-duration: 300ms;
+}
+
+/* media */
+
+@media screen and (max-width: 800px) {
+  .nav_item__list>p {
+    display: none;
+  }
+
+  .nav_item__burger {
+    display: block;
+  }
+
+  .nav {
+    margin: 0px 35px 0px 35px;
+  }
+}
