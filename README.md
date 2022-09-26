@@ -118,3 +118,4 @@ git config --global user.email
 git config --global user.email
 'test@ukr.net' | змінює email користувача |
 |  |  |
+# curs_build
